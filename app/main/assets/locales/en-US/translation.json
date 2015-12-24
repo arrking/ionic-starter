@@ -1,0 +1,13 @@
+{
+    "sales_assistant": "Sales Assistant",
+    "login_username": "User name",
+    "login_password": "Password",
+    "login_submit": "Login",
+    "login_forget_pwd": "Forget my password.",
+    "login_username_plc": "unique id for each user",
+    "login_password_plc": "six to twenty characters",
+    "tabs-home": "Home",
+    "tabs-product": "Products",
+    "tabs-customer": "Customers",
+    "tabs-activity": "Activities"
+}

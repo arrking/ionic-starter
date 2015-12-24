@@ -1,0 +1,105 @@
+<!-- <ion-view>
+    <ion-content>
+        customers
+    </ion-content>
+</ion-view>
+ -->
+<ion-side-menus>
+    <ion-side-menu-content>
+        <ion-header-bar>
+        </ion-header-bar>
+        <!-- without a current customer -->
+        <ion-content ng-show="!current_cutomer.headimgurl">
+            <div class="bar bar-subheader">
+                <h2 class="title">从左侧客户列表选择或者请客户扫描二维码</h2>
+            </div>
+        </ion-content>
+        <!-- is inject with a current customer -->
+        <ion-content ng-show="current_cutomer.headimgurl">
+            <div class="row col-75">
+                <div class="col">
+                    <!-- <img src="http://wx.qlogo.cn/mmopen/PiajxSqBRaELtxTCFSiadKmAIqHTyM9icXBgjVS4yY2zBPaTql3kf5LmjxFEe5GTpGJKzVTOKYbzdaoCpTtyia29sg/0" width="100"> -->
+                    <img src="{{current_cutomer.headimgurl}}" width="100" height="100">
+                </div>
+                <div class="col">{{current_cutomer.name}}</div>
+                <div class="col">Level 3</div>
+            </div>
+            <div class="item item-divider">
+                客户信息
+            </div>
+            <div class="row">
+                <div class="col">电话</div>
+                <div class="col">{{current_cutomer.telephone}}</div>
+                <div class="col">地址</div>
+                <div class="col">{{current_cutomer.address}}</div>
+            </div>
+            <div class="row col-75">
+                <div class="col">尺码</div>
+                <div class="col">上身 L</div>
+                <div class="col">下身 M</div>
+            </div>
+            <div class="row col-75">
+                <div class="col">偏好</div>
+                <div class="col">
+                    英伦
+                </div>
+                <div class="col">
+                    森林
+                </div>
+            </div>
+            <!-- make the tabs position -->
+            <div class="row">
+                <div class="button-bar">
+                    <a class="button">试衣记录</a>
+                    <a class="button">购买记录</a>
+                    <a class="button">优惠券</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="list" style="width:100%!important">
+                    <a class="item item-icon-left" href="javascript:void(0)">
+                        <i class="icon ion-tshirt-outline"></i> T-shirt
+                    </a>
+                    <a class="item item-icon-left" href="javascript:void(0)">
+                        <i class="icon ion-tshirt-outline"></i> T-shirt
+                    </a>
+                    <a class="item item-icon-left" href="javascript:void(0)">
+                        <i class="icon ion-tshirt-outline"></i> T-shirt
+                    </a>
+                    <a class="item item-icon-left" href="javascript:void(0)">
+                        <i class="icon ion-tshirt-outline"></i> T-shirt
+                    </a>
+                    <a class="item item-icon-left" href="javascript:void(0)">
+                        <i class="icon ion-tshirt-outline"></i> T-shirt
+                    </a>
+                    <a class="item item-icon-left" href="javascript:void(0)">
+                        <i class="icon ion-tshirt-outline"></i> T-shirt
+                    </a>
+                    <a class="item item-icon-left" href="javascript:void(0)">
+                        <i class="icon ion-tshirt-outline"></i> T-shirt
+                    </a>
+                </div>
+            </div>
+        </ion-content>
+    </ion-side-menu-content>
+    <ion-side-menu expose-aside-when="large">
+        <ion-header-bar>
+        </ion-header-bar>
+        <ion-content>
+            <div class="list">
+                <div class="item item-divider">
+                    客户列表
+                </div>
+                <label class="item item-input">
+                    <i class="icon ion-search placeholder-icon"></i>
+                    <input type="text" placeholder="搜索" ng-model="searchtext" ng-change="filter_customers(searchtext)">
+                </label>
+                <a class="item item-avatar" ng-repeat="x in customers" ng-click="link(x.id)">
+                    <img src="{{x.headimgurl}}">
+                    <h2>{{x.name}}</h2>
+                    <p>VIP</p>
+                </a>
+            </div>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>

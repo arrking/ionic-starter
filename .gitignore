@@ -1,0 +1,9 @@
+node_modules
+*swp
+*swo
+*sublime*
+.tmp
+platforms
+plugins
+www
+bower_components

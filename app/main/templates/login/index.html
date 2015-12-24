@@ -1,0 +1,29 @@
+<ion-view hide-nav-bar="true">
+    <ion-header-bar>
+        <h1 class="title">{{'sales_assistant'|i18ng}}</h1>
+    </ion-header-bar>
+    <ion-content>
+        <div class="bar bar-error bar-energized" ng-if="errMessage" ng-bind="errMessage"></div>
+        <div ng-class="{'has-error': errMessage}">
+            <div class="list">
+                <label class="item item-input">
+                    <span class="input-label">{{'login_username'|i18ng}}</span>
+                    <input type="text" ng-model="loginData.username" ng-change="validateLoginData()" placeholder="{{'login_username_plc'|i18ng}}">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">{{'login_password'|i18ng}}</span>
+                    <input type="password" ng-model="loginData.password" ng-change="validateLoginData()" placeholder="{{'login_password_plc'|i18ng}}">
+                </label>
+            </div>
+            <div class="padding">
+                <button ng-if="enableLoginBtn" class="button button-block button-balanced" ng-click="doLogin()"> {{'login_submit'|i18ng}} </button>
+                <button ng-if="!enableLoginBtn" class="button button-block button-balanced disabled" disabled> {{'login_submit'|i18ng}} </button>
+                <p class="text-center">
+                    <a class="button button-clear icon icon-right ion-help-buoy" ui-sref="login-forget-pwd">{{'login_forget_pwd'|i18ng}}</a>
+                </p>
+            </div>
+        </div>
+    </ion-content>
+    </ion-slide>
+    </ion-slide-box>
+</ion-view>

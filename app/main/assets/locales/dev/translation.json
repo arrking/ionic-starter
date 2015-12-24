@@ -1,0 +1,13 @@
+{
+    "sales_assistant": "导购助手",
+    "login_username": "用户名",
+    "login_password": "密码",
+    "login_submit": "登入",
+    "login_forget_pwd": "忘记密码",
+    "login_username_plc": "用户的唯一身份标识",
+    "login_password_plc": "6位到20位的字符串",
+    "tabs-home": "首页",
+    "tabs-product": "产品",
+    "tabs-customer": "顾客",
+    "tabs-activity": "活动"
+}
